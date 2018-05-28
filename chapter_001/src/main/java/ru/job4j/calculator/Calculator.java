@@ -1,5 +1,5 @@
 /**
-* Calculatщк.
+* Calculator.
 *
 * @author Goculenko Alexander (goculenko.al@gmail.com)
 * @version $Id$
