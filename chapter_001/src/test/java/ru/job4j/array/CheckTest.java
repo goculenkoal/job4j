@@ -44,11 +44,11 @@ public class CheckTest {
         assertThat(result, is(false));
     }
 
-//    @Test
+    @Test
     public void whenDataNotMonoByTrueThenFalse2() {
         Check check = new Check();
-        boolean[] input = new boolean[] {true, true, true, false};
+        boolean[] input = new boolean[] {true, false, true, false, true};
         boolean result = check.mono(input);
         assertThat(result, is(false));
-    } //
+    }
 }
