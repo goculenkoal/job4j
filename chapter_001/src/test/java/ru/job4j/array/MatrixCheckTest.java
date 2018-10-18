@@ -34,6 +34,7 @@ public class MatrixCheckTest {
         boolean result = check.mono(input);
         assertThat(result, is(false));
     }
+
     @Test
     public void whenDataNotMonoByTrue1ThenFalse() {
         MatrixCheck check = new MatrixCheck();
@@ -44,6 +45,16 @@ public class MatrixCheckTest {
         };
         boolean result = check.mono(input);
         assertThat(result, is(false));
+    }
+    @Test
+    public void whenDataNotMonoByTrue1ThenFalse1() {
+        MatrixCheck check = new MatrixCheck();
+        boolean[][] input = new boolean[][] {
+                {true, false},
+                {false, true}
+        };
+        boolean result = check.mono(input);
+        assertThat(result, is(true));
     }
 }
 
