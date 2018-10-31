@@ -1,3 +1,4 @@
+package ru.job4j.loop;
 /**
 * Factorial calculation.
 *
@@ -6,9 +7,11 @@
 * @since 0.1
 */
 
-package ru.job4j.loop;
-
 public class Factorial {
+	/**
+	 * @param n - input value .
+	 * @return factorial of input value
+	 */
 	public int calcFactorial(int n) {
 		int factorial = 1;
 		for (int index = 1; index <= n; index++) {

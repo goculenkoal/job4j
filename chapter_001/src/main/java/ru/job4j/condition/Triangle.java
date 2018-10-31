@@ -35,38 +35,31 @@ public class Triangle {
     /**
      * Метод должен вычислить площадь треугольника.
      *
-     * @return Вернуть прощадь, если треугольник существует или -1, если треугольника нет.
+     * @return result - Вернуть прощадь, если треугольник существует или -1, если треугольника нет.
      */
     public double area() {
-        double rsl = -1;
+        double result = -1;
         double ab = this.a.distanceTo(this.b);
         double ac = this.a.distanceTo(this.c);
         double bc = this.b.distanceTo(this.c);
         double p = this.period(ab, ac, bc);
         if (this.exist(ab, ac, bc)) {
-            // написать формулу для расчета площади треугольника.
-            //rsl = ...
-            rsl = Math.sqrt(p * (p - ab) * (p - ac) * (p - bc));
+            result = Math.sqrt(p * (p - ab) * (p - ac) * (p - bc));
         }
-        return rsl;
+        return result;
     }
 
     /**
      * Метод проверяет можно ли построить треугольник с такими длинами сторон.
-     * <p>
-     * Подумайте какое надо написать условие, чтобы определить можно ли построить треугольник.
      *
      * @param ab Длина от точки a b.
      * @param ac Длина от точки a c.
      * @param bc Длина от точки b c.
-     * @return
+     * @return - Проверку можно ли построить треугольник
      */
-
     private boolean exist(double ab, double ac, double bc) {
         return (ab < (ac + bc) && ac < (ab + bc) && bc < (ab + ac));
-
         }
-
     }
 
 	

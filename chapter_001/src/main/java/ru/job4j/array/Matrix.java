@@ -1,6 +1,6 @@
 package ru.job4j.array;
 /**
- * CheckArray.
+ * Matrix, table of multiply.
  *
  * @author Goculenko Alexander (goculenko.al@gmail.com)
  * @version $Id$
@@ -8,9 +8,8 @@ package ru.job4j.array;
  */
 public class Matrix {
     /**
-     *
      * @param size column and line
-     * @return multiply array
+     * @return table - multiply array
      */
     public int[][] multiple(int size) {
         int[][] table = new int[size][size];

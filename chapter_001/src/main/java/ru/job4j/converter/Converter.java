@@ -1,3 +1,4 @@
+package ru.job4j.converter;
 /**
 * Converter.
 *
@@ -5,7 +6,7 @@
 * @version $Id$
 * @since 0.1
 */
-package ru.job4j.converter;
+
 
 /**
  * Корвертор валюты.
@@ -38,6 +39,7 @@ public class Converter {
     public int euroToRuble(int value) {
         return value * 70;
     }
+
      /**
      * Конвертируем доллары в рубли.
      * @param value доллары.

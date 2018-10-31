@@ -1,3 +1,4 @@
+package ru.job4j.loop;
 /**
 * Make psevdo chess board.
 *
@@ -6,12 +7,15 @@
 * @since 0.1
 */
 
-package ru.job4j.loop;
-
 public class Board {
+    /**
+     * Конвертируем рубли в евро.
+     * @param width - ширина доски, @param height - высота доски.
+     * @return .
+     */
     public String paint(int width, int height) {
         StringBuilder screen = new StringBuilder();
-        String ln = System.lineSeparator();
+        String line = System.lineSeparator();
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 if (i % 2 == j % 2) {
@@ -20,7 +24,7 @@ public class Board {
                     screen.append(" ");
                 }
             }
-            screen.append(ln);
+            screen.append(line);
         }
         return screen.toString();
     }

@@ -1,6 +1,6 @@
 package ru.job4j.array;
 /**
- * CheckArray.
+ * Сортировка пузырьком.
  *
  * @author Goculenko Alexander (goculenko.al@gmail.com)
  * @version $Id$
@@ -28,5 +28,4 @@ package ru.job4j.array;
             a[left] = a [right];
             a[right] = temp;
         }
-
     }

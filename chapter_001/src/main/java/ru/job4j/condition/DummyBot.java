@@ -9,15 +9,15 @@ public class DummyBot {
     /**
      * Отвечает на вопросы.
      * @param question Вопрос от клиента.
-     * @return Ответ.
+     * @return result - Ответ.
      */
     public String answer(String question) {
-        String rsl = "Это ставит меня в тупик. Спросите другой вопрос.";
+        String result = "Это ставит меня в тупик. Спросите другой вопрос.";
         if ("Привет, Бот.".equals(question)) {
-           rsl = "Привет, умник.";
+           result = "Привет, умник.";
         } else if ("Пока.".equals(question)) {
-            rsl = "До скорой встречи.";
+            result = "До скорой встречи.";
         }
-        return rsl;
+        return result;
      }
 }

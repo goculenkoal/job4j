@@ -27,7 +27,7 @@ public class ArrayChar {
                result = false;
                break;
            }
-        } // проверить. что массив data имеет первые элементы одинаковые с value
+        }
         return result;
     }
 }
