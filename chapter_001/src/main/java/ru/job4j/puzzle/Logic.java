@@ -70,25 +70,20 @@ public class Logic {
        int[][] table = this.convert();
        boolean result = false;
        int symbol = 1;
-       int hor, ver;
        for (int i = 0; i < table.length; i++) {
-           hor = 0;
-           ver = 0;
+           int hor = 0;
+           int ver = 0;
            for (int j = 0; j < table.length; j++) {
                if (table[i][j] == symbol) {
                    hor += table[i][j];
                }
-
                if (table[j][i] == symbol) {
                    ver += table[j][i];
                }
-
                if (hor == table.length || ver == table.length) {
                    result = true;
                    }
-
            }
-
        }
        return result;
    }
