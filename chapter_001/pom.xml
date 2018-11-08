@@ -2,6 +2,9 @@
    <modelVersion>4.0.0</modelVersion>
    <artifactId>chapter_001</artifactId>
    <version>2.0</version>
+    <modules>
+        <module>chapter_002</module>
+    </modules>
     <dependencies>
         <dependency>
             <groupId>org.jetbrains</groupId>
@@ -10,7 +13,7 @@
             <scope>compile</scope>
         </dependency>
     </dependencies>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
    <parent>
        <groupId>ru.job4j</groupId>
        <artifactId>junior</artifactId>
