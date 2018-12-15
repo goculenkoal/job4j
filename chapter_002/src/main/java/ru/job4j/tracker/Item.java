@@ -45,6 +45,11 @@ public class Item {
 		this.desc = desc;
 		this.create = create;
 	}
+
+	public Item(String name, String desc) {
+		this.name = name;
+		this.desc = desc;
+	}
 	
 	/**
 	* Геттеры и сеттеры для полей класса.

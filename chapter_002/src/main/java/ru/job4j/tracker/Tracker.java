@@ -50,34 +50,39 @@ public class Tracker {
 	 * Метод реализации перезаписи заявки.
 	 *
 	 * @param item - запись новой заявки.
-	 *             String.valueOf() - конвертация числовых значений в Стринг.
+	 * String.valueOf() - конвертация числовых значений в Стринг.
 	 */
-	public void replace(String id, Item item) {
-		for (int index = 0; index < position; index++) {
-			if (this.items[index].getId().equals(id)) {
-				item.setId(id);
-				items[index] = item;
+	public boolean replace(String id, Item item) {
+		boolean result = false;
+		for (int i = 0; i < position; i++) {
+			if (this.items[i].getId().equals(id)) {
+				this.items[i] = item;
+				result = true;
+				break;
 			}
 		}
+		return result;
 	}
 
 	/**
 	 * Метод реализации удаления заявки.
-	 *
 	 * @param id - поиск заявки по id.
 	 */
-	public void delete(String id) {
+	public boolean delete(String id) {
+		boolean result = false;
 		for (int index = 0; index < position; index++) {
 			if (this.items[index].getId().equals(id)) {
 				System.arraycopy(items, index + 1, items, index, items.length - 1 - index);
 				position--;
+				result = true;
+				break;
 			}
 		}
+		return result;
 	}
 
 	/**
 	 * Метод получения всех заявок.
-	 *
 	 * @return - возврат массива this.items без null элементов.
 	 */
 	public Item[] findAll() {
@@ -91,10 +96,8 @@ public class Tracker {
 		return result;
 	}
 
-	
 	/**
 	 * Метод получения списка заявок, у которых совпадает имя.
-	 *
 	 * @param name - имя заявки
 	 * @return - возврат массива item без null элементов.
 	 */
@@ -111,7 +114,6 @@ public class Tracker {
 	
 	/**
 	 * Метод поиска по ID
-	 *
 	 * @param id - поиск по данному id
 	 * @return result - возвращаем найденную заявку, если заявки не существует - возвращаем - null; 
 	 */
