@@ -1,13 +1,14 @@
 package ru.job4j.tracker;
 
 import java.util.*;
+
 /**
-* Реализация класса Tracker.
-*
-* @author Goculenko Alexander (goculenko.al@gmail.com)
-* @version $Id$
-* @since 0.1
-*/
+ * Реализация класса Tracker.
+ *
+ * @author Goculenko Alexander (goculenko.al@gmail.com)
+ * @version $Id$
+ * @since 0.1
+ */
 public class Tracker {
 	/**
 	 * Массив для хранение заявок.
@@ -57,6 +58,7 @@ public class Tracker {
 		for (int i = 0; i < position; i++) {
 			if (this.items[i].getId().equals(id)) {
 				this.items[i] = item;
+				item.setId(id);
 				result = true;
 				break;
 			}
@@ -111,18 +113,20 @@ public class Tracker {
 		}
 		return Arrays.copyOf(result, resultPosition);
 	}
-	
+
 	/**
 	 * Метод поиска по ID
 	 * @param id - поиск по данному id
-	 * @return result - возвращаем найденную заявку, если заявки не существует - возвращаем - null; 
+	 * @return result - возвращаем найденную заявку, если заявки не существует - возвращаем - null;
 	 */
 	public Item findById(String id) {
 		Item result = null;
 	    for (Item item : items) {
-			if (item.getId().equals(id)) {
-				result = item;
-				break;
+	    	if(item != null) {
+				if (id.equals(item.getId())) {
+					result = item;
+					break;
+				}
 			}
 		}
 		return result;

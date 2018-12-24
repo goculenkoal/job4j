@@ -154,6 +154,9 @@ public class StartUI {
         }
     }
 
+    /**
+     * Метод реализует поиск заявки по Name.
+     */
     public void findName() {
         System.out.println("------------ Найти заявки по имени --------------");
         String name = this.input.ask("Введите имя заявки : ");
@@ -167,6 +170,9 @@ public class StartUI {
         }
     }
 
+    /**
+     * Метод реализует вызов меню.
+     */
     private void showMenu() {
         System.out.println("Меню.");
         System.out.println("0 - Добавить заявку");
