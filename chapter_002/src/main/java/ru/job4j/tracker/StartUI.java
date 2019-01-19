@@ -163,7 +163,8 @@ public class StartUI {
         Item[] foundItems = this.tracker.findByName(name);
         if (foundItems.length > 0) {
             for (Item element : foundItems) {
-                System.out.println("------------ Найдена заявка с " + element + " --------------");
+                System.out.println("------------ Найдена заявка:" + element + " --------------");
+                //System.out.println(element);
             }
         } else {
             System.out.println("------------ В системе не найдена заявка с именем " + name);
