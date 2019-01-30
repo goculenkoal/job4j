@@ -1,7 +1,7 @@
 package ru.job4j.tracker;
 
 public class MenuTracker {
-	
+
     private Input input;
     private Tracker tracker;
     private UserAction[] actions = new UserAction[6];
@@ -28,6 +28,15 @@ public class MenuTracker {
         this.actions[4] = new FindById();
         this.actions[5] = new FindByName();
     }
+
+    /**
+     * Метод для получения массива меню.
+     *
+     * @return Длина массива.
+     */
+    public int getActionsLength() {
+        return this.actions.length;
+}
 
     /**
      * Метод в зависимости от указанного ключа, выполняет соотвествующие действие.
