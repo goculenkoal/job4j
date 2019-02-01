@@ -1,10 +1,10 @@
 package ru.job4j.tracker;
 
-public class EditItem implements UserAction {
-	@Override
-	public int key() {
-		return 2;
-	}
+public class EditItem extends BaseAction {
+
+    public EditItem(int key, String name){
+        super(key,name);
+    }
  
     @Override
     public void execute(Input input, Tracker tracker) {
@@ -18,10 +18,5 @@ public class EditItem implements UserAction {
          } else {
           System.out.println("--------- Item not found with same ID --------");
       }
-    }
-
-    @Override
-    public String info() {
-        return String.format("%s. %s", this.key(), "EditItem");
     }
 }

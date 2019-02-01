@@ -5,6 +5,7 @@ public class MenuTracker {
     private Input input;
     private Tracker tracker;
     private UserAction[] actions = new UserAction[6];
+	private int position = 0;
 
     /**
      * Конструктор.
@@ -21,12 +22,12 @@ public class MenuTracker {
      * Метод заполняет массив.
      */
     public void fillActions() {
-        this.actions[0] = new AddItem();
-        this.actions[1] = new ShowItem();
-        this.actions[2] = new EditItem();
-        this.actions[3] = new DeleteItem();
-        this.actions[4] = new FindById();
-        this.actions[5] = new FindByName();
+        this.actions[position++] = new AddItem(0, "Add Item");
+        this.actions[position++] = new ShowItem(1, "Show All Items");
+        this.actions[position++] = new EditItem(2,"EditItem");
+        this.actions[position++] = new DeleteItem(3, "Delete Item");
+        this.actions[position++] = new FindById(4,"Find By ID");
+        this.actions[position++] = new FindByName(5,"Find By Name");
     }
 
     /**
