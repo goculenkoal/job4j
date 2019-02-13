@@ -24,10 +24,10 @@ public class MenuTracker {
     public void fillActions() {
         this.actions[position++] = new AddItem(0, "Add Item");
         this.actions[position++] = new ShowItem(1, "Show All Items");
-        this.actions[position++] = new EditItem(2,"EditItem");
+        this.actions[position++] = new EditItem(2, "EditItem");
         this.actions[position++] = new DeleteItem(3, "Delete Item");
-        this.actions[position++] = new FindById(4,"Find By ID");
-        this.actions[position++] = new FindByName(5,"Find By Name");
+        this.actions[position++] = new FindById(4, "Find By ID");
+        this.actions[position++] = new FindByName(5, "Find By Name");
     }
 
     /**

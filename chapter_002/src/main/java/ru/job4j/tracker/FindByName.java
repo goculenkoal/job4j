@@ -3,7 +3,7 @@ package ru.job4j.tracker;
 public class FindByName extends BaseAction {
 
 	public FindByName(int key, String name) {
-		super(key,name);
+		super(key, name);
 	}
 
 	@Override
